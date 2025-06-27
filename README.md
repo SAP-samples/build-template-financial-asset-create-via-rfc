@@ -56,7 +56,14 @@ SAP Cloud Connector is required to establish a connection between SAP Build and 
 > [!Note]
 > The configuration and setup of Cloud Connector is not covered by this document.
 
-### :three: Import the action in SAP Build
+### :three: Create the required Role Collections in SAP BTP Cockpit
+The following role collection must be manually created in SAP  BTP Cockpit and assigned to the users involved in the process.
+- _FA_CompanyCode1_User_ - This role collection must be granted to the users authorized to submit requests for Assets in Company Code 1010
+- _FA_CompanyCode2_User_ - This role collection must be granted to the users authorized to submit requests for Assets in Company Code 1710
+- _FA_CompanyCode1_AssetStaff_ - This role collection must be granted to the users authorized to process and approve requests for Assets in Company Code 1010
+- _FA_CompanyCode2_AssetStaff_ - This role collection must be granted to the users authorized to process and approve requests for Assets in Company Code 1710
+
+### :four: Import the action in SAP Build
 The action "" is a dependency for the automation process and it must be imported in your tenant as part of the initial project setup.
 
 The content is stored in folder ["actions"](/build/actions) and it can be downloaded from there.
@@ -64,15 +71,16 @@ The content is stored in folder ["actions"](/build/actions) and it can be downlo
 > [!Note]
 > The setup of the required destination to the S/4HANA backend is not covered by this document. The destination must be defined both in the BTP cockpit as well in SAP Build.
 
-### :four: Import the content for SAP Build Apps
+### :five: Import the content for SAP Build Apps
 The content is stored in folder ["build_apps"](/build/build_apps) and it can be downloaded from there.
 
 To import the content in your tenant, please follow the procedure described in the [official documentation of SAP Build](https://help.sap.com/docs/build/sap-build-core/import-project).
 
-### :five: Import the content for SAP Process Automation
+### :six: Import the content for SAP Process Automation
 The content is stored in folder ["build_process_automation"](/build/build_process_automation) and it can be downloaded from there.
 
 To import the content in your tenant, please follow the procedure described in the [official documentation of SAP Build](https://help.sap.com/docs/build/sap-build-core/import-project).
+
 
 ## License
 Copyright (c) 2025 SAP SE or an SAP affiliate company. All rights reserved. This project is licensed under the Apache Software License, version 2.0 except as noted otherwise in the [LICENSE](LICENSE) file.
