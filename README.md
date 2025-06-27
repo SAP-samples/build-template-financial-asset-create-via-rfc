@@ -15,9 +15,9 @@ Once a request is finalized and approved, the corresponding data are pushed to S
 
 ### Key Features
 - Enables a lean governance process for new Financial Assets.
-- Enforces segregation of duties: users can request Financial Assets only for the Compnay Codes they are authorized to; dynamic approvers determination based on Company Code.
+- Enforces segregation of duties: users can request Financial Assets only for the Company Codes they are authorized to; dynamic approvers determination based on Company Code.
 - Enables approvers to review the creation request.
-- Enables requestors to modify and resubmit the rejected requestes.
+- Enables requestors to modify and resubmit the rejected requests.
 
 ## Solution Flow
 
@@ -26,15 +26,15 @@ Once a request is finalized and approved, the corresponding data are pushed to S
  
 1. From Work Zone (or using a direct link), the requestor access the dedicated mobile application
     - the app is technically developed in SAP Build Apps
-3. The requestor maintain the desired attributes 
-    - The field "Company Code" is pre-populated based on the requestor's roles and uathorizations
+3. The requestor maintains the desired attributes 
+    - The field "Company Code" is pre-populated based on the requestor's roles and authorizations
     - Format validations are executed at runtime as soon as the user maintain a field in the app
-4. Once done, the user click the "submit" button to trigger the corresponding approval proces
+4. Once done, the user click the "submit" button to trigger the corresponding approval process
     - The process is defined and implemented in SAP Build Process Automation;
 5. In the background, the system dynamically determines the list of approvers based on the selected Company Code
 6. The request is then routed to the authorized approvers for review and validation
     - The workitems to be evaluated are accessible from the SAP Build Inbox
-7. The approver must add a comment to the request and then he can decide to apporve or reject it
+7. The approver must add a comment to the request and then he can decide to approve or reject it
 8. In case the request is approved, the data are then pushed to the S/4HANA backend via an RFC call
 
 ## Download and Installation
@@ -44,7 +44,7 @@ The repository consists of three content packages for SAP Build - one for the de
 To complete the setup of this scenario, please follow the instructions carefully.
 
 > [!Note]
-> To setup this scenario, we assume a basic techncial knowledge of the SAP BTP platform (in particular related to Destination and Cloud Connector setup), SAP Build and SAP S/4HANA (in particular, on custom development).
+> To setup this scenario, we assume a basic technical knowledge of the SAP BTP platform (in particular related to Destination and Cloud Connector setup), SAP Build and SAP S/4HANA (in particular, on custom development).
 
 
 ### :one: Setup of the content in S/4HANA on-prem/private cloud
