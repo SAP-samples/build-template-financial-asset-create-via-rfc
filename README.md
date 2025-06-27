@@ -39,8 +39,13 @@ Once a request is finalized and approved, the corresponding data are pushed to S
 
 ## Download and Installation
 
+The following paragraphs explain how the delivered content can be setup and enabled in your SAP Build tenant.
+The repository consists of three content packages for SAP Build - one for the destination, one for SAP Buil Apps and one for SAP Process Automation - and one package containing some ABAP code for the S/4HANA system.
+To complete the setup of this scenario, please follow the instructions carefully.
+
 > [!Note]
-> This use case is developed using SAP Build Apps and SAP Build Process Automation services. To complete the setup of this scenario, please There are 3 content packages associated with this use case. One each for SAP Build Apps, SAP Build Process Automation. You are currently setting up SAP Build Code content. Later you will follow the instructions to setup SAP Build Apps and Build Process Automation content packages, which will complete the setup of this usecase.
+> To setup this scenario, we assume a basic techncial knowledge of the SAP BTP platform (in particular related to Destination and Cloud Connector setup), SAP Build and SAP S/4HANA (in particular, on custom development).
+
 
 ### :one: Setup of the content in S/4HANA on-prem/private cloud
 The required function module must be manually created in the customer namespace in the target S/4HANA system - please refer to the dedicated [README](https://github.tools.sap/OSS-Outbound-Process/sap-build-approval-process-for-financial-asset-rfc/blob/main/ABAP/README.md) file.
