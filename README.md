@@ -1,5 +1,5 @@
 # SAP Build Extensibility Scenario
-# Approval for Financial Asset Creation in S/4HANA
+# Approval for Financial Asset Creation in SAP S/4HANA
 
 ## Overview
 
@@ -7,11 +7,11 @@ This scenario allows to establish a lean governance process for the creation of 
 The project represents an example how SAP Build can consume and invoke BAPIs and Remote Function Calls (RFC) to connect with SAP S/4HANA.
 
 Business users can request the creation of new Financial Assets using a dedicated mobile app developed in SAP Build Apps: once a request is submitted, a dedicated workflow - defined in SAP Build Process Automation - is triggered for further review and approval. To ensure a proper segregation of responsibilities, the list of reviewers is determined based on the Company Code specified in the request.
-Once a request is finalized and approved, the corresponding data are pushed to S/4HANA, the new Financial Asset is created in the system and the process completed.
+Once a request is finalized and approved, the corresponding data are pushed to SAP S/4HANA, the new Financial Asset is created in the system and the process completed.
 
 > [!Note]
   > - This usecase is developed using SAP Build Apps and SAP Build Process Automation services.
-  > - Records are finally created in an S/4HANA system; therefore its availability is required to enable the end-to-end scenario
+  > - Records are finally created in an SAP S/4HANA system; therefore its availability is required to enable the end-to-end scenario
 
 ### Key Features
 - Enables a lean governance process for new Financial Assets.
@@ -35,23 +35,23 @@ Once a request is finalized and approved, the corresponding data are pushed to S
 6. The request is then routed to the authorized approvers for review and validation
     - The workitems to be evaluated are accessible from the SAP Build Inbox
 7. The approver must add a comment to the request and then he can decide to approve or reject it
-8. In case the request is approved, the data are then pushed to the S/4HANA backend via an RFC call
+8. In case the request is approved, the data are then pushed to the SAP S/4HANA backend via an RFC call
 
 ## Download and Installation
 
 The following paragraphs explain how the delivered content can be setup and enabled in your SAP Build tenant.
-The repository consists of three content packages for SAP Build - one for the destination, one for SAP Buil Apps and one for SAP Process Automation - and one package containing some ABAP code for the S/4HANA system.
+The repository consists of three content packages for SAP Build - one for the destination, one for SAP Buil Apps and one for SAP Process Automation - and one package containing some ABAP code for the SAP S/4HANA system.
 To complete the setup of this scenario, please follow the instructions carefully.
 
 > [!Note]
 > To setup this scenario, we assume a basic technical knowledge of the SAP BTP platform (in particular related to Destination and Cloud Connector setup), SAP Build and SAP S/4HANA (in particular, on custom development).
 
 
-### :one: Setup of the content in S/4HANA on-prem/private cloud
-The required function module must be manually created in the customer namespace in the target S/4HANA system - please refer to the dedicated [README](https://github.tools.sap/OSS-Outbound-Process/sap-build-approval-process-for-financial-asset-rfc/blob/main/ABAP/README.md) file.
+### :one: Setup of the content in SAP S/4HANA on-prem/private cloud
+The required function module must be manually created in the customer namespace in the target SAP S/4HANA system - please refer to the dedicated [README](https://github.tools.sap/OSS-Outbound-Process/sap-build-approval-process-for-financial-asset-rfc/blob/main/ABAP/README.md) file.
 
 ### :two: Installation and configuration of Cloud Connector
-SAP Cloud Connector is required to establish a connection between SAP Build and an S/4HANA backend; therefore its configuration and operability is pre-requisites for this scenario.
+SAP Cloud Connector is required to establish a connection between SAP Build and an SAP S/4HANA backend; therefore its configuration and operability is pre-requisites for this scenario.
 
 > [!Note]
 > The configuration and setup of Cloud Connector is not covered by this document.
@@ -69,7 +69,7 @@ The action "" is a dependency for the automation process and it must be imported
 The content is stored in folder ["actions"](/build/actions) and it can be downloaded from there.
 
 > [!Note]
-> The setup of the required destination to the S/4HANA backend is not covered by this document. The destination must be defined both in the BTP cockpit as well in SAP Build.
+> The setup of the required destination to the SAP S/4HANA backend is not covered by this document. The destination must be defined both in the BTP cockpit as well in SAP Build.
 
 ### :five: Import the content for SAP Build Apps
 The content is stored in folder ["build_apps"](/build/build_apps) and it can be downloaded from there.
@@ -84,4 +84,3 @@ To import the content in your tenant, please follow the procedure described in t
 
 ## License
 Copyright (c) 2025 SAP SE or an SAP affiliate company. All rights reserved. This project is licensed under the Apache Software License, version 2.0 except as noted otherwise in the [LICENSE](LICENSE) file.
-
