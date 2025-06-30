@@ -2,7 +2,6 @@
 # Approval for Financial Asset Creation in SAP S/4HANA
 
 ## Overview
-
 This scenario allows to establish a lean governance process for the creation of Financial Assets in SAP S/4HANA.
 The project represents an example how SAP Build can consume and invoke BAPIs and Remote Function Calls (RFC) to connect with SAP S/4HANA.
 
@@ -23,29 +22,27 @@ Once a request is finalized and approved, the corresponding data are pushed to S
 
 <p><img width="1289" alt="image" src="https://github.com/SAP-samples/build-extensibility---approval-process-for-financial-asset-in-s-4hana/blob/main/pictures/solution_flow.jpg" /></p>
 
- 
+
 1. From Work Zone (or using a direct link), the requestor access the dedicated mobile application
     - the app is technically developed in SAP Build Apps
-3. The requestor maintains the desired attributes 
+2. The requestor maintains the desired attributes
     - The field "Company Code" is pre-populated based on the requestor's roles and authorizations
     - Format validations are executed at runtime as soon as the user maintain a field in the app
-4. Once done, the user click the "submit" button to trigger the corresponding approval process
+3. Once done, the user click the "submit" button to trigger the corresponding approval process
     - The process is defined and implemented in SAP Build Process Automation;
-5. In the background, the system dynamically determines the list of approvers based on the selected Company Code
-6. The request is then routed to the authorized approvers for review and validation
+4. In the background, the system dynamically determines the list of approvers based on the selected Company Code
+5. The request is then routed to the authorized approvers for review and validation
     - The workitems to be evaluated are accessible from the SAP Build Inbox
-7. The approver must add a comment to the request and then he can decide to approve or reject it
-8. In case the request is approved, the data are then pushed to the SAP S/4HANA backend via an RFC call
+6. The approver must add a comment to the request and then he can decide to approve or reject it.
+7. In case the request is approved, the data are then pushed to the SAP S/4HANA backend via an RFC call
 
-## Download and Installation
+## Content Download and Installation
 
 The following paragraphs explain how the delivered content can be setup and enabled in your SAP Build tenant.
 The repository consists of three content packages for SAP Build - one for the destination, one for SAP Buil Apps and one for SAP Process Automation - and one package containing some ABAP code for the SAP S/4HANA system.
 To complete the setup of this scenario, please follow the instructions carefully.
-
 > [!Note]
 > To setup this scenario, we assume a basic technical knowledge of the SAP BTP platform (in particular related to Destination and Cloud Connector setup), SAP Build and SAP S/4HANA (in particular, on custom development).
-
 
 ### :one: Setup of the content in SAP S/4HANA on-prem/private cloud
 The required function module must be manually created in the customer namespace in the target SAP S/4HANA system - please refer to the dedicated [README](https://github.tools.sap/OSS-Outbound-Process/sap-build-approval-process-for-financial-asset-rfc/blob/main/ABAP/README.md) file.
