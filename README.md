@@ -44,23 +44,20 @@ To complete the setup of this scenario, please follow the instructions carefully
 > [!Note]
 > To setup this scenario, we assume a basic technical knowledge of the SAP BTP platform (in particular related to Destination and Cloud Connector setup), SAP Build and SAP S/4HANA (in particular, on custom development).
 
-### :one: Setup of the content in SAP S/4HANA on-prem/private cloud
-The required function module must be manually created in the customer namespace in the target SAP S/4HANA system - please refer to the dedicated [README](https://github.tools.sap/OSS-Outbound-Process/sap-build-approval-process-for-financial-asset-rfc/blob/main/ABAP/README.md) file.
-
-### :two: Installation and configuration of Cloud Connector
+### :one: Installation and configuration of Cloud Connector
 SAP Cloud Connector is required to establish a connection between SAP Build and an SAP S/4HANA backend; therefore its configuration and operability is pre-requisites for this scenario.
 
 > [!Note]
 > The configuration and setup of Cloud Connector is not covered by this document.
 
-### :three: Create the required Role Collections in SAP BTP Cockpit
+### :two: Create the required Role Collections in SAP BTP Cockpit
 The following role collection must be manually created in SAP  BTP Cockpit and assigned to the users involved in the process.
 - _FA_CompanyCode1_User_ - This role collection must be granted to the users authorized to submit requests for Assets in Company Code 1010
 - _FA_CompanyCode2_User_ - This role collection must be granted to the users authorized to submit requests for Assets in Company Code 1710
 - _FA_CompanyCode1_AssetStaff_ - This role collection must be granted to the users authorized to process and approve requests for Assets in Company Code 1010
 - _FA_CompanyCode2_AssetStaff_ - This role collection must be granted to the users authorized to process and approve requests for Assets in Company Code 1710
 
-### :four: Import the action in SAP Build
+### :three: Import the action in SAP Build
 The action "" is a dependency for the automation process and it must be imported in your tenant as part of the initial project setup.
 
 The content is stored in folder ["actions"](/build/actions) and it can be downloaded from there.
@@ -68,12 +65,12 @@ The content is stored in folder ["actions"](/build/actions) and it can be downlo
 > [!Note]
 > The setup of the required destination to the SAP S/4HANA backend is not covered by this document. The destination must be defined both in the BTP cockpit as well in SAP Build.
 
-### :five: Import the content for SAP Build Apps
+### :four: Import the content for SAP Build Apps
 The content is stored in folder ["build_apps"](/build/build_apps) and it can be downloaded from there.
 
 To import the content in your tenant, please follow the procedure described in the [official documentation of SAP Build](https://help.sap.com/docs/build/sap-build-core/import-project).
 
-### :six: Import the content for SAP Process Automation
+### :five: Import the content for SAP Process Automation
 The content is stored in folder ["build_process_automation"](/build/build_process_automation) and it can be downloaded from there.
 
 To import the content in your tenant, please follow the procedure described in the [official documentation of SAP Build](https://help.sap.com/docs/build/sap-build-core/import-project).
