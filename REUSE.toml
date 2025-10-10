@@ -8,4 +8,14 @@ SPDX-PackageComment = "The code in this project may include calls to APIs (\"API
 path = "*"
 precedence = "aggregate"
 SPDX-FileCopyrightText = "2025 SAP SE or an SAP affiliate company and build-extensibility---approval-process-for-financial-asset-in-s-4hana contributors"
-SPDX-License-Identifier = "Apache-2.0
+SPDX-License-Identifier = "Apache-2.0"
+
+[[annotations]]
+path = "pictures/*"
+SPDX-FileCopyrightText = "2025 SAP SE or an SAP affiliate company and asset-management---maintenance-task-list-components contributors"
+SPDX-License-Identifier = "Apache-2.0"
+
+[[annotations]]
+path = "build/*"
+SPDX-FileCopyrightText = "2025 SAP SE or an SAP affiliate company and asset-management---maintenance-task-list-components contributors"
+SPDX-License-Identifier = "Apache-2.0"
