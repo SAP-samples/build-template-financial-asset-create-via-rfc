@@ -16,6 +16,6 @@ SPDX-FileCopyrightText = "2025 SAP SE or an SAP affiliate company and asset-mana
 SPDX-License-Identifier = "Apache-2.0"
 
 [[annotations]]
-path = "build/*"
+path = "build/build_apps/*"
 SPDX-FileCopyrightText = "2025 SAP SE or an SAP affiliate company and asset-management---maintenance-task-list-components contributors"
 SPDX-License-Identifier = "Apache-2.0"
