@@ -78,3 +78,5 @@ To import the content in your tenant, please follow the procedure described in t
 
 ## License
 Copyright (c) 2025 SAP SE or an SAP affiliate company. All rights reserved. This project is licensed under the Apache Software License, version 2.0 except as noted otherwise in the [LICENSE](LICENSE) file.
+
+[![REUSE status](https://api.reuse.software/badge/github.com/SAP-samples/build-template-financial-asset-create-via-rfc)](https://api.reuse.software/info/github.com/SAP-samples/build-template-financial-asset-create-via-rfc)
